@@ -1,0 +1,25 @@
+
+<div class="jumbotron container">
+
+
+<h2 style="color:antiquewhite">Yahoo! Weather Application </h2>
+<div class="col-md-8 col-md-offset-2">
+ <div class="form-group">
+  <input type="text" [(ngModel)]="id_city" class="form-control" placeholder="Enter City name ..."><br>
+  <input type="text" [(ngModel)]="id_state" class="form-control" placeholder="Enter country Name"><br>
+  <button type="button" class="btn btn-success" (click)="callWeatherService()">Submit</button>
+  <br><br><br>
+  <br>
+  <div class="well">
+
+    <b>City, State, Country :</b><h3> {{ this.op_city }} {{ this.op_region }} {{ this.op_country }} </h3> <br>
+    <br><br>
+    <b>Current Condition :</b> <h3> {{ this.op_text }}</h3> <br><br><br>
+    <b>Current Temperature :</b><h3> {{ this.op_temp }}</h3> <br>
+  </div>
+  <p class="text-info">Total of all the service requests:
+    <span class="badge">{{this._sharedService.totReqsMade}}</span>
+  </p>
+ </div>
+</div>
+</div>
